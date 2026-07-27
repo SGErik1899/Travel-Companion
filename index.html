@@ -3270,8 +3270,59 @@ createBackup();
 
 }
 
+const restoreBackupButton =
+document.getElementById(
+"restoreBackupButton"
+);
 
 
+if(restoreBackupButton){
+
+restoreBackupButton.addEventListener(
+"click",
+()=>{
+
+document.getElementById(
+"backupFileInput"
+).click();
+
+}
+
+);
+
+}
+
+
+
+const backupFileInput =
+document.getElementById(
+"backupFileInput"
+);
+
+
+if(backupFileInput){
+
+backupFileInput.addEventListener(
+"change",
+(e)=>{
+
+
+const file =
+e.target.files[0];
+
+
+if(file){
+
+restoreBackup(file);
+
+}
+
+
+}
+
+);
+
+}
 const saveTripButton = document.getElementById(
 "saveTripButton"
 );

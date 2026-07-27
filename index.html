@@ -3708,7 +3708,68 @@ URL.revokeObjectURL(url);
 
 }
 
+function restoreBackup(file){
 
+const reader = new FileReader();
+
+
+reader.onload = function(e){
+
+
+try{
+
+
+const data = JSON.parse(
+e.target.result
+);
+
+
+
+const confirmRestore = confirm(
+"Möchtest du dieses Backup wirklich wiederherstellen?\n\nAlle aktuellen Reisen, Checklisten, Dokumente und Notizen werden ersetzt."
+);
+
+
+
+if(confirmRestore){
+
+
+localStorage.setItem(
+STORAGE_KEY,
+JSON.stringify(data)
+);
+
+
+alert(
+"Backup erfolgreich wiederhergestellt."
+);
+
+
+location.reload();
+
+
+}
+
+
+}
+catch(error){
+
+
+alert(
+"Die Backup-Datei konnte nicht gelesen werden."
+);
+
+
+}
+
+
+};
+
+
+reader.readAsText(file);
+
+
+}
 function showPage(id){
 const form =
 document.getElementById(

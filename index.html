@@ -3566,9 +3566,8 @@ String.fromCodePoint(
 function showDashboard(){
 
 const trip = getActiveTrip();
-
-const buttons =
-document.querySelectorAll(".nav-button");
+const countdown = getCountdown(trip);
+const buttons =document.querySelectorAll(".nav-button");
 
 
 buttons.forEach(btn=>{

@@ -1798,7 +1798,8 @@ Sichere deine Reisen, Checklisten, Dokumente und Notizen.
 <button 
 class="nav-button"
 id="createBackupButton"
-onclick="alert('Button gedrückt')">
+onclick="
+alert('Button gedrückt')">
 💾 Backup erstellen
 
 </button>
@@ -1824,7 +1825,7 @@ style="display:none">
 
 
 <script>
-alert("Test GitHub funktioniert");
+
 // =====================================
 // Travel Companion
 // Version 0.1.7
@@ -3252,7 +3253,7 @@ const createBackupButton =
 document.getElementById(
 "createBackupButton"
 );
-alert(createBackupButton);
+
     
 if(createBackupButton){
 
@@ -3261,7 +3262,7 @@ createBackupButton.addEventListener(
 "click",
 
 ()=>{
-alert("Backup Button funktioniert");
+
 createBackup();
 
 }
@@ -3739,8 +3740,7 @@ JSON.stringify(data)
 );
 
 
-alert(
-"Backup erfolgreich wiederhergestellt."
+
 );
 
 
@@ -3754,8 +3754,7 @@ location.reload();
 catch(error){
 
 
-alert(
-"Die Backup-Datei konnte nicht gelesen werden."
+
 );
 
 
@@ -4302,7 +4301,7 @@ document.getElementById("countdownHours").innerText = countdown.hours;
 document.getElementById("countdownMinutes").innerText = countdown.minutes;
 
 },10000);
-alert("JavaScript läuft bis zum Ende");
+
 showDashboard();
 
 updateChecklistProgress();

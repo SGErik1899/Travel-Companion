@@ -3616,12 +3616,16 @@ document.getElementById("countdownMinutes").innerText = countdown.minutes;
 
 function createBackup(){
 
+const currentData = JSON.parse(
+localStorage.getItem(STORAGE_KEY)
+);
+
+
 const backupData = JSON.stringify(
-travelData,
+currentData,
 null,
 2
 );
-
 
 const blob = new Blob(
 [backupData],

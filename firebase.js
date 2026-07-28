@@ -49,6 +49,7 @@ onAuthStateChanged(auth, (user) => {
     console.log("Bereits angemeldet:", user.displayName);
 
     document.getElementById("cloudStatus").textContent = "✅ Angemeldet";
+    document.getElementById("cloudUser").textContent = user.displayName;
 
 } else {
 

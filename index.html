@@ -2772,7 +2772,7 @@ documents:[],
 
 notes:[],
 
-checklists: JSON.parse(JSON.stringify(defaultData.checklists))
+checklists: []
 
 };
 
@@ -2811,10 +2811,11 @@ editingTripIndex = null;
 
 }else{
 
+    travelData.trips.push(newTrip);
 
-travelData.trips.push(newTrip);
+    updateDefaultChecklists();
 
-console.log(travelData);
+    console.log(travelData);
 
 }
 

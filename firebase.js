@@ -57,6 +57,7 @@ async function logout() {
 
 }
 window.loginWithGoogle = loginWithGoogle;
+window.logout = logout;
 
 onAuthStateChanged(auth, (user) => {
 

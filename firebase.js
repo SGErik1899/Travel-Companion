@@ -29,3 +29,5 @@ async function loginWithGoogle() {
     console.log("Google-Login wird vorbereitet");
 
 }
+
+window.loginWithGoogle = loginWithGoogle;

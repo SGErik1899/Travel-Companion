@@ -74,6 +74,12 @@ onAuthStateChanged(auth, (user) => {
 
     console.log("Kein Benutzer angemeldet");
 
+    document.getElementById("cloudStatus").textContent = "❌ Nicht angemeldet";
+    document.getElementById("cloudUser").textContent = "-";
+
+    document.getElementById("googleLoginButton").style.display = "block";
+    document.getElementById("logoutButton").style.display = "none";
+
 }
 
 });

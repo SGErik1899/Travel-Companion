@@ -26,8 +26,17 @@ console.log("✅ Firebase erfolgreich initialisiert");
 
 async function loginWithGoogle() {
 
-    console.log("Google-Login wird vorbereitet");
+    try {
+
+        const result = await signInWithPopup(auth, provider);
+
+        console.log("Erfolgreich angemeldet:", result.user.displayName);
+
+    } catch (error) {
+
+        console.error("Login fehlgeschlagen:", error);
+
+    }
 
 }
-
 window.loginWithGoogle = loginWithGoogle;

@@ -3404,6 +3404,9 @@ editingTripIndex = null;
 
 
 travelData.trips.push(newTrip);
+
+travelData.activeTrip = travelData.trips.length - 1;
+
 updateDefaultChecklists();
 
 console.log(travelData);

@@ -30,7 +30,7 @@ async function loginWithGoogle() {
 
         const result = await signInWithPopup(auth, provider);
 
-        console.log("Erfolgreich angemeldet:", result.user.displayName);
+        console.log(result.user);
 
     } catch (error) {
 

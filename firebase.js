@@ -41,6 +41,21 @@ async function loginWithGoogle() {
     }
 
 }
+async function logout() {
+
+    try {
+
+        await signOut(auth);
+
+        console.log("Erfolgreich abgemeldet");
+
+    } catch (error) {
+
+        console.error("Abmeldung fehlgeschlagen:", error);
+
+    }
+
+}
 window.loginWithGoogle = loginWithGoogle;
 
 onAuthStateChanged(auth, (user) => {

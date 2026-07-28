@@ -23,3 +23,9 @@ const auth = getAuth(app);
 const provider = new GoogleAuthProvider();
 
 console.log("✅ Firebase erfolgreich initialisiert");
+
+async function loginWithGoogle() {
+
+    console.log("Google-Login wird vorbereitet");
+
+}

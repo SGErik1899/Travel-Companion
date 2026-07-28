@@ -67,6 +67,8 @@ onAuthStateChanged(auth, (user) => {
 
     document.getElementById("cloudStatus").textContent = "✅ Angemeldet";
     document.getElementById("cloudUser").textContent = user.displayName;
+    document.getElementById("googleLoginButton").style.display = "none";
+    document.getElementById("logoutButton").style.display = "block";
 
 } else {
 

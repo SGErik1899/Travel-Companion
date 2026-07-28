@@ -44,14 +44,16 @@ window.loginWithGoogle = loginWithGoogle;
 
 onAuthStateChanged(auth, (user) => {
 
-    if (user) {
+  if (user) {
 
-        console.log("Bereits angemeldet:", user.displayName);
+    console.log("Bereits angemeldet:", user.displayName);
 
-    } else {
+    document.getElementById("cloudStatus").textContent = "✅ Angemeldet";
 
-        console.log("Kein Benutzer angemeldet");
+} else {
 
-    }
+    console.log("Kein Benutzer angemeldet");
+
+}
 
 });

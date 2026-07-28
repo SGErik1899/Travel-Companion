@@ -3,7 +3,8 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/12.16.0/fireba
 
 import {
   getAuth,
-  GoogleAuthProvider
+  GoogleAuthProvider,
+  signInWithPopup
 } from "https://www.gstatic.com/firebasejs/12.16.0/firebase-auth.js";
 // Firebase-Konfiguration
 const firebaseConfig = {

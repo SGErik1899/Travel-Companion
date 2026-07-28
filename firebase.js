@@ -2,9 +2,9 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/12.16.0/firebase-app.js";
 
 import {
-  getAuth
+  getAuth,
+  GoogleAuthProvider
 } from "https://www.gstatic.com/firebasejs/12.16.0/firebase-auth.js";
-
 // Firebase-Konfiguration
 const firebaseConfig = {
   apiKey: "AIzaSyCxdlwpIrYzOZth3h2NMOOva2NRVVPFX0M",

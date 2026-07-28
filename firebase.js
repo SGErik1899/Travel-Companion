@@ -41,3 +41,17 @@ async function loginWithGoogle() {
 
 }
 window.loginWithGoogle = loginWithGoogle;
+
+onAuthStateChanged(auth, (user) => {
+
+    if (user) {
+
+        console.log("Bereits angemeldet:", user.displayName);
+
+    } else {
+
+        console.log("Kein Benutzer angemeldet");
+
+    }
+
+});

@@ -18,4 +18,7 @@ const firebaseConfig = {
 // Firebase starten
 const app = initializeApp(firebaseConfig);
 
+const auth = getAuth(app);
+const provider = new GoogleAuthProvider();
+
 console.log("✅ Firebase erfolgreich initialisiert");

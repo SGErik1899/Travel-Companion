@@ -82,6 +82,10 @@ if (!(await userExists(user))) {
 
 }
 
+const trips = await loadTrips(user);
+
+window.firebaseTrips = trips;
+
 await createTrip(user, "Testreise");
 
     document.getElementById("cloudStatus").textContent = "✅ Angemeldet";

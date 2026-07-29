@@ -3458,8 +3458,11 @@ travelData.activeTrip = travelData.trips.length - 1;
 
 updateDefaultChecklists();
 
-console.log(travelData);
+if (window.currentUser && window.createTrip) {
+    await window.createTrip(window.currentUser, newTrip);
+}
 
+console.log(travelData);
 }
 
 saveData();

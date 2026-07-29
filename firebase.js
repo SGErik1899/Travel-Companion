@@ -169,3 +169,24 @@ async function createTrip(user, tripName) {
     );
 
 }
+
+async function loadTrips(user) {
+
+    const snapshot = await getDocs(
+        collection(db, "users", user.uid, "trips")
+    );
+
+    const trips = [];
+
+    snapshot.forEach(doc => {
+
+        trips.push({
+            id: doc.id,
+            ...doc.data()
+        });
+
+    });
+
+    return trips;
+
+}

@@ -115,22 +115,22 @@ async function testFirestore() {
 
     }
 }
-  async function saveUser(user) {
+ async function saveUser(user) {
 
     try {
 
-   await setDoc(
-    doc(db, "users", user.uid),
-    {
-        name: user.displayName,
-        email: user.email,
-        lastLogin: new Date().toISOString(),
-        settings: {}
-    },
-    {
-        merge: true
-    }
-);
+        await setDoc(
+            doc(db, "users", user.uid),
+            {
+                name: user.displayName,
+                email: user.email,
+                lastLogin: new Date().toISOString(),
+                settings: {}
+            },
+            {
+                merge: true
+            }
+        );
 
         console.log("✅ Benutzer gespeichert");
 
@@ -142,3 +142,12 @@ async function testFirestore() {
 
 }
 
+async function userExists(user) {
+
+    const userDoc = await getDoc(
+        doc(db, "users", user.uid)
+    );
+
+    return userDoc.exists();
+
+}

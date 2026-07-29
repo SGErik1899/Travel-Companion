@@ -72,6 +72,8 @@ window.logout = logout;
 
 onAuthStateChanged(auth, async (user) => {
 
+    window.currentUser = user;
+
   if (user) {
 
    console.log("Bereits angemeldet:", user.displayName);

@@ -69,11 +69,12 @@ async function logout() {
 window.loginWithGoogle = loginWithGoogle;
 window.logout = logout;
 
-onAuthStateChanged(auth, (user) => {
+onAuthStateChanged(auth, async (user) => {
 
   if (user) {
 
     console.log("Bereits angemeldet:", user.displayName);
+    await saveUser(user);
 
     document.getElementById("cloudStatus").textContent = "✅ Angemeldet";
     document.getElementById("cloudUser").textContent = user.displayName;

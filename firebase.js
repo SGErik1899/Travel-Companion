@@ -14,9 +14,9 @@ import {
     addDoc,
     doc,
     setDoc,
-    getDocs
+    getDocs,
+    getDoc
 } from "https://www.gstatic.com/firebasejs/12.16.0/firebase-firestore.js";
-
 // Firebase-Konfiguration
 const firebaseConfig = {
   apiKey: "AIzaSyCxdlwpIrYzOZth3h2NMOOva2NRVVPFX0M",

@@ -90,7 +90,7 @@ if (window.applyFirebaseTrips) {
     window.applyFirebaseTrips(trips);
 }
 
-await createTrip(user, "Testreise");
+
 
     document.getElementById("cloudStatus").textContent = "✅ Angemeldet";
     document.getElementById("cloudUser").textContent = user.displayName;

@@ -93,6 +93,22 @@ onAuthStateChanged(auth, (user) => {
 });
 async function testFirestore() {
 
-    console.log("Testfunktion wurde gefunden");
+    try {
+
+        const docRef = await addDoc(
+            collection(db, "test"),
+            {
+                nachricht: "Hallo Firestore!",
+                erstelltAm: new Date().toISOString()
+            }
+        );
+
+        console.log("✅ Testdokument gespeichert:", docRef.id);
+
+    } catch (error) {
+
+        console.error("❌ Fehler beim Speichern:", error);
+
+    }
 
 }

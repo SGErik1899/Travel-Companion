@@ -156,3 +156,14 @@ async function userExists(user) {
     return userDoc.exists();
 
 }
+
+async function createTrip(user, tripName) {
+
+    await addDoc(
+        collection(db, "users", user.uid, "trips"),
+        {
+            name: tripName
+        }
+    );
+
+}

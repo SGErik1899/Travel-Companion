@@ -91,3 +91,8 @@ onAuthStateChanged(auth, (user) => {
 }
 
 });
+async function testFirestore() {
+
+    console.log("Testfunktion wurde gefunden");
+
+}

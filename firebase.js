@@ -112,5 +112,26 @@ async function testFirestore() {
         console.error("❌ Fehler beim Speichern:", error);
 
     }
+}
+  async function saveUser(user) {
+
+    try {
+
+        await setDoc(
+            doc(db, "users", user.uid),
+            {
+                name: user.displayName,
+                email: user.email
+            }
+        );
+
+        console.log("✅ Benutzer gespeichert");
+
+    } catch (error) {
+
+        console.error("❌ Benutzer konnte nicht gespeichert werden:", error);
+
+    }
 
 }
+

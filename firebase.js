@@ -207,3 +207,5 @@ async function loadTrips(user) {
     return trips;
 
 }
+
+window.createTrip = createTrip;

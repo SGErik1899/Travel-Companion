@@ -9,7 +9,9 @@ import {
   signOut
 } from "https://www.gstatic.com/firebasejs/12.16.0/firebase-auth.js";
 import {
-    getFirestore
+    getFirestore,
+    collection,
+    addDoc
 } from "https://www.gstatic.com/firebasejs/12.16.0/firebase-firestore.js";
 
 // Firebase-Konfiguration

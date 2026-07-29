@@ -84,12 +84,6 @@ if (!(await userExists(user))) {
 
 const trips = await loadTrips(user);
 
-window.firebaseTrips = trips;
-
-if (window.applyFirebaseTrips) {
-    window.applyFirebaseTrips(trips);
-}
-
 
 
     document.getElementById("cloudStatus").textContent = "✅ Angemeldet";

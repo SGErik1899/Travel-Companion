@@ -4046,6 +4046,28 @@ showDashboard();
 
 updateChecklistProgress();
 
+window.applyFirebaseTrips = function(trips){
+
+    if(!Array.isArray(trips)){
+        return;
+    }
+
+    travelData.trips = trips;
+
+    if(travelData.trips.length > 0){
+        travelData.activeTrip = 0;
+    }
+
+    saveData();
+
+    renderTrips();
+
+    showDashboard();
+
+    updateChecklistProgress();
+
+};
+
 }
 );
 const editButton = card.querySelector(

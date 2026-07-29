@@ -11,7 +11,9 @@ import {
 import {
     getFirestore,
     collection,
-    addDoc
+    addDoc,
+    doc,
+    setDoc
 } from "https://www.gstatic.com/firebasejs/12.16.0/firebase-firestore.js";
 
 // Firebase-Konfiguration

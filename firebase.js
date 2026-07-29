@@ -118,13 +118,16 @@ async function testFirestore() {
 
     try {
 
-        await setDoc(
-            doc(db, "users", user.uid),
-            {
-                name: user.displayName,
-                email: user.email
-            }
-        );
+      await setDoc(
+    doc(db, "users", user.uid),
+    {
+        name: user.displayName,
+        email: user.email
+    },
+    {
+        merge: true
+    }
+);
 
         console.log("✅ Benutzer gespeichert");
 

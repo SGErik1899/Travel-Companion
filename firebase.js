@@ -32,7 +32,7 @@ const db = getFirestore(app);
 const provider = new GoogleAuthProvider();
 
 console.log("✅ Firebase erfolgreich initialisiert");
-
+testFirestore();
 
 async function loginWithGoogle() {
 

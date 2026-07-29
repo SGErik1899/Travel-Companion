@@ -3459,7 +3459,14 @@ travelData.activeTrip = travelData.trips.length - 1;
 updateDefaultChecklists();
 
 if (window.currentUser && window.createTrip) {
-    await window.createTrip(window.currentUser, newTrip);
+
+    updateDefaultChecklists();
+
+    await window.createTrip(
+        window.currentUser,
+        travelData.trips[travelData.activeTrip]
+    );
+
 }
 
 console.log(travelData);

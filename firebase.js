@@ -167,17 +167,32 @@ async function userExists(user) {
 
 }
 
-async function createTrip(user, tripName) {
+async function createTrip(user, trip) {
 
     await addDoc(
         collection(db, "users", user.uid, "trips"),
         {
-            name: tripName
+            name: trip.name,
+            country: trip.country,
+            location: trip.location,
+            departure: trip.departure,
+            departureTime: trip.departureTime,
+            returnDate: trip.returnDate,
+            hotel: trip.hotel,
+            outboundFlight: trip.outboundFlight,
+            returnFlight: trip.returnFlight,
+            tourOperator: trip.tourOperator,
+            bookingNumber: trip.bookingNumber,
+            status: trip.status,
+            preparation: trip.preparation,
+            tasks: trip.tasks,
+            documents: trip.documents,
+            notes: trip.notes,
+            checklists: trip.checklists
         }
     );
 
 }
-
 async function loadTrips(user) {
 
     const snapshot = await getDocs(

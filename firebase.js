@@ -74,13 +74,15 @@ onAuthStateChanged(auth, async (user) => {
 
   if (user) {
 
-    console.log("Bereits angemeldet:", user.displayName);
+   console.log("Bereits angemeldet:", user.displayName);
 
 if (!(await userExists(user))) {
 
     await saveUser(user);
 
 }
+
+await createTrip(user, "Testreise");
 
     document.getElementById("cloudStatus").textContent = "✅ Angemeldet";
     document.getElementById("cloudUser").textContent = user.displayName;

@@ -121,9 +121,11 @@ async function testFirestore() {
       await setDoc(
     doc(db, "users", user.uid),
     {
-        name: user.displayName,
-        email: user.email
-    },
+       {
+    name: user.displayName,
+    email: user.email,
+    lastLogin: new Date().toISOString()
+},
     {
         merge: true
     }

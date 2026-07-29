@@ -86,6 +86,10 @@ const trips = await loadTrips(user);
 
 window.firebaseTrips = trips;
 
+if (window.applyFirebaseTrips) {
+    window.applyFirebaseTrips(trips);
+}
+
 await createTrip(user, "Testreise");
 
     document.getElementById("cloudStatus").textContent = "✅ Angemeldet";
